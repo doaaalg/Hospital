@@ -1,1 +1,1 @@
-mysql> SELECT doctors.doctorID, doctors.name, doctors.hospitalID, hospitals.name, hospitals.size FROM doctors INNER JOIN hospitals ON doctors.hospitalID=hospitals.hospitalID WHERE size=(SELECT MAX(size) FROM hospitals);
+SELECT doctors.doctorID, doctors.name, doctors.hospitalID, hospitals.name, hospitals.size FROM doctors INNER JOIN hospitals ON doctors.hospitalID=hospitals.hospitalID WHERE size=(SELECT MAX(size) FROM hospitals);
